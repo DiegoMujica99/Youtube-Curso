@@ -1,0 +1,435 @@
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: 0;
+}
+
+body{
+	font-family: 'Open Sans', sans-serif;
+}
+
+.contenedor{
+	padding: 60px 0px;
+	width: 90%;
+	max-width: 1000px;
+	margin: auto;
+	overflow: hidden;
+}
+
+.titulo{
+	color: #642a73;
+	font-size: 30px;
+	text-align: center;
+	margin-bottom: 60px;
+}
+
+/* header */
+
+header{
+	width: 100%;
+	height: 600px;
+	background: #FF0099; 
+	/* fallback for old browsers */
+	background: -webkit-linear-gradient(to  right, #49324090, #FF009990), url(resourses/portada.jpg);  
+	/* Chrome 10-25, Safari 5.1-6 */
+	background: linear-gradient(to right, #49324090, #FF009990), url(resourses/portada.jpg); 
+	/* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+	background-size: cover;
+	background-attachment: fixed;
+	position: relative;
+}
+
+nav{
+	text-align: right;
+	padding: 30px 30px 0 0;
+
+	
+	/*Barra fija */ 
+
+	background: #4d0686;
+	position: fixed;
+	left: 0;
+	top: 0;
+	width: 100%;
+	z-index: 100;
+	box-shadow: 0 0 10px 0 rgba(0, 0, 0, .5);
+
+}
+
+nav > a{
+	font-family: 'Courier Prime', monospace;
+	color:#ffffff;
+	font-weight: 400;
+	font-size: 16px;
+	text-decoration: none;
+	margin: 10px 10px 10px 10px;
+}
+nav > a:hover{
+	text-decoration: underline;
+}
+
+header .textos-header{
+	display: flex;
+	height: 430px;
+	width: 100%;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	text-align: center;
+}
+
+.textos-header h1{
+	font-size: 50px;
+	color: #fff;
+}
+
+.textos-header h2{
+	font-size: 30px;
+	font-weight: 300;
+	color: #fff;
+}
+
+.wave{
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+}
+
+/* About us */
+
+.contenedor-sobre-nosotros{
+	display: flex;
+ 	flex-direction: row;
+}
+
+.imagen-about-us{
+	width: 48%;
+}
+
+.sobre-nosotros .contenido-textos{
+	width: 48%;
+}
+
+.contenido-textos h3{
+	margin-bottom: 15px;
+}
+
+.contenido-textos h3 span{
+	background: #4d0686;
+	color: white;
+	border-radius: 50%;
+	display: inline-block;
+	text-align: center;
+	width: 30px;
+	height: 30px;
+	padding: 2px;
+	box-shadow: 0 0 6px 0 rgba(0, 0, 0, .5);
+}
+
+.contenido-textos p{
+	padding: 0px 0px 30px 15px;
+	font-weight: 300;
+	text-align: justify;
+}
+
+/* Galeria */
+
+.portafolio{
+	background: #f2f2f2;
+}
+
+.galeria-port{
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+}
+
+.imagen-port{
+	width: 24%;
+	height: 200px;
+	margin-bottom: 	10px;
+	overflow: hidden;
+	position: relative;
+	cursor: pointer;
+	box-shadow: 0 0 6px 0 rgba(0, 0, 0, .5);
+}
+
+.imagen-port > img{
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	display: block;
+}
+
+.hover-galeria{
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	transform: scale(0);
+	background: hsla(273, 91%, 27%, 0.7);
+	transition: transform .5s;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;	
+}
+
+.hover-galeria img{
+	width: 50px;
+}
+
+.hover-galeria p{
+	color: #fff;
+}
+
+.imagen-port:hover .hover-galeria{
+	transform: scale(1);
+}
+
+/* Clients*/
+
+.cards{
+	display: flex;
+	justify-content: center;
+}
+
+.cards .card{
+	width: 46%;
+	height: 200px;
+	background: #4d0686;
+	display: flex;
+	align-items: center;
+	border-radius: 5px;
+	box-shadow: 0 0 6px 0 rgba(0, 0, 0, 0.6);
+	margin: 0 15px 0 15px;
+}
+
+.cards .card img {
+	width: 100px;
+	height: 100px;
+	object-fit: cover;
+	border: 3px solid #fff;
+	border-radius: 50%;
+	display: block;
+	box-shadow: 0 0 6px 0 rgba(0, 0, 0, 0.6);
+	margin: 0 20px 0 20px;
+}
+
+.cards .card > .contenido-texto-card{
+	color: #fff;
+}
+
+.cards .card > .contenido-texto-card{
+	font-weight: 300;
+	padding-top: 5px;
+}
+
+/* Our Team Marca*/ 
+
+.about-services{
+	background: #f2f2f2;
+	padding-bottom: 30px;
+}
+.servicio-cont{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.servicio-ind{
+	width: 28%;
+	text-align: center;
+}
+
+.servicio-ind img{
+	width: 90%;
+	height: 200px;
+
+}
+
+.servicio-ind h3{
+	margin: 10px 0 10px 0;
+}
+
+.servicio-ind p{
+	text-align: justify;
+}
+
+/*footer*/
+
+footer{
+	background: #414141;
+	padding: 60px 0 30px 0;
+	margin: auto;
+	overflow: hidden;
+}
+
+.contenedor-footer{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	width: 50%;
+	text-align: center;
+	margin: auto;
+	padding-bottom: 50px;
+	border-bottom: 1px solid #ccc;
+}
+
+.content-foo h4{
+	color: #fff;
+	border-bottom: 3px solid #4d0686;
+	padding-bottom: 5px;
+	margin-bottom: 10px;
+}
+
+.content-foo p{
+	color: #ccc;
+}
+
+.titulo-final{
+	text-align: center;
+	font-size: 24px;
+	margin: 20px 0 0 0;
+	color: #9e9797;
+}
+
+@media screen and (max-device-width: 900px){
+ 	header{
+		background-position: center;
+	}
+
+	nav > a{
+		font-size: 30px;
+	}
+
+	.titulo{
+		font-size: 50px;
+		text-align: center;
+		margin-bottom: 60px;
+	}
+
+
+	.contenedor-sobre-nosotros{
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+	}
+
+	.sobre-nosotros .contenido-textos{
+		width: 90%;
+		margin: 10px 0 5px 0;
+	}
+
+	.imagen-about-us {
+		width: 90%;
+	}
+
+	/*Galeria*/
+
+	.imagen-port{
+		width: 44%;
+		justify-content: center;
+		align-items: center;
+		margin: 5px 5px 5px 5px;
+	}
+
+	/*Clientes*/
+
+	.cards{
+		flex-direction: column;
+		justify-content: center;
+		align-items:  center;
+	}
+
+	.cards .card{
+		width: 90%;
+
+	}
+
+	.cards .card .contenido-texto-card{
+		font-size: 30px
+
+	}
+
+	.cards .card:first-child{
+		width: 90%;
+		margin-bottom: 30px;
+		
+	}
+
+	/*Servicios*/
+
+	.servicio-cont{
+		justify-content: center;
+		flex-direction: column;
+
+	}
+
+	.servicio-ind{
+		text-align: center;
+		width: 100%;
+		margin-bottom: 60px;
+	}
+
+	.servicio-ind:last-child{
+		margin-bottom: 0;
+	}
+
+	.servicio-ind img{
+		width: 50%;
+		height: 50%;
+	}
+
+	.servicio-ind h3{
+		font-size: 150%;
+	}
+
+	.servicio-ind p{
+		font-size: 20px;
+	}
+
+	/*contacto*/
+
+	.contenedor-footer{
+		justify-content: center;
+		flex-direction: column;
+	}
+
+	.content-foo{
+		text-align: center;
+		width: 100%;
+		margin-bottom: 60px;
+	}
+
+	.content-foo:last-child{
+		margin-bottom: 0;
+	}
+
+	.content-foo h4{
+		font-size: 30px;
+	}
+
+	.content-foo p{
+		font-size: 30px;
+	}
+} 
+
+@media screen and (max-device-width: 500px){
+	nav{
+		text-align: center;
+		padding: 30px 0 0 0;
+	}
+
+	nav >a{
+		margin-right: 5px;
+	}
+
+	.textos-header h1{
+		font-size: 35px;
+	}
+
+	.textos-header h2{
+		font-size: 20px;
+	}
+}
